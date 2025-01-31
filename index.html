@@ -18,9 +18,44 @@
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" required>
             </div>
-            <!-- Otros campos -->
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="salario">Salario (en Gs):</label>
+                <input type="number" id="salario" required>
+            </div>
+            <div class="form-group">
+                <label for="estadoCivil">Estado Civil:</label>
+                <select id="estadoCivil" onchange="toggleConyugeFields()" required>
+                    <option value="soltero">Soltero</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                </select>
+            </div>
+            <div id="conyugeFields" style="display:none;">
+                <div class="form-group">
+                    <label for="nombreConyuge">Nombre del Cónyuge:</label>
+                    <input type="text" id="nombreConyuge">
+                </div>
+                <div class="form-group">
+                    <label for="salarioConyuge">Salario del Cónyuge (en Gs):</label>
+                    <input type="number" id="salarioConyuge">
+                </div>
+            </div>
             <button type="submit">Registrar Cliente</button>
         </form>
+        <div id="resultadoAnalisis"></div>
+        <div id="listaClientes"></div>
     </div>
 
     <script src="script.js"></script>
