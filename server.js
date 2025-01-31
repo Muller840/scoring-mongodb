@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Conectar a MongoDB
-mongoose.connect('mongodb+srv://<usuario>:<contraseña>@<tu-cluster>.mongodb.net/clientes', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://hermann90:tu-contraseña@cluster.k91jt.mongodb.net/clientes', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Esquema del cliente
 const clienteSchema = new mongoose.Schema({
